@@ -14,6 +14,10 @@ class Point {
     return Point(x: json['x'], y: json['y']);
   }
 
+  Map<String, dynamic> toJson() {
+    return {'x': x, 'y': y};
+  }
+
   double distance(Point p) {
     double w = p.x - x;
     double h = p.y - y;
