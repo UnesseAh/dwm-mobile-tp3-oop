@@ -10,6 +10,10 @@ class Point {
     return Point(x: data[0], y: data[1]);
   }
 
+  factory Point.fromJson(Map<String, dynamic> json) {
+    return Point(x: json['x'], y: json['y']);
+  }
+
   double distance(Point p) {
     double w = p.x - x;
     double h = p.y - y;
