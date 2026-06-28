@@ -33,3 +33,25 @@ class Circle extends Shape {
     return p1.distance(p2);
   }
 }
+
+class Rectangle extends Shape {
+  Rectangle({required super.p1, required super.p2});
+
+  @override
+  double getArea() {
+    return getHeight() * getWidth();
+  }
+
+  @override
+  double getPerimeter() {
+    return 2 * (getHeight() + getWidth());
+  }
+
+  double getHeight() {
+    return (p1.y - p2.y).abs();
+  }
+
+  double getWidth() {
+    return (p1.x - p2.x).abs();
+  }
+}
