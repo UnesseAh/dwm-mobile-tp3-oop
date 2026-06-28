@@ -1,10 +1,10 @@
 import 'dart:math';
 
 class Point {
-  double x;
-  double y;
+  final double x;
+  final double y;
 
-  Point({required this.x, required this.y});
+  const Point({required this.x, required this.y});
 
   double distance(Point p) {
     double w = p.x - x;
