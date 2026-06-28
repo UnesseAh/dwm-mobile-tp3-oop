@@ -6,6 +6,10 @@ class Point {
 
   const Point({required this.x, required this.y});
 
+  factory Point.fromList(List<double> data) {
+    return Point(x: data[0], y: data[1]);
+  }
+
   double distance(Point p) {
     double w = p.x - x;
     double h = p.y - y;
