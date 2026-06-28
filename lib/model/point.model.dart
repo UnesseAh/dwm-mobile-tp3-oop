@@ -14,4 +14,8 @@ class Point {
 
   @override
   String toString() => 'Point(x: $x, y: $y)';
+
+  Point copyWith({double? x, double? y}) {
+    return Point(x: x ?? this.x, y: y ?? this.y);
+  }
 }
